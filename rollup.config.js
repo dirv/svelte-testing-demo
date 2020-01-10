@@ -29,7 +29,7 @@ export default {
     sourcemap: true,
     format: "iife",
     name: "app",
-    file: "build/bundle-index.js"
+    file: "public/build/bundle-index.js"
   },
   plugins,
   watch: {
