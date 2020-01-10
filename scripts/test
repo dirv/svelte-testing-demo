@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [ -z $1 ]; then
+  npx rollup -c rollup.test.config.js
+else
+  npx rollup -c rollup.test.config.js -i $1
+fi
+
+npx jasmine

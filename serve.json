@@ -1,0 +1,8 @@
+{
+  "public": "public",
+  "rewrites": [
+    { "source": "/write", "destination": "/dashboard.html" },
+    { "source": "/signup", "destination": "/dashboard.html" },
+    { "source": "/verify/*", "destination": "/dashboard.html" }
+  ]
+}

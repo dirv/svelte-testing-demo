@@ -1,0 +1,10 @@
+{
+  "spec_dir": ".",
+  "spec_files": [
+    "build/bundle-tests.js"
+  ],
+  "helpers": [
+    "node_modules/source-map-support/register.js"
+  ],
+  "random": false
+}

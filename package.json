@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
+    "start": "serve",
     "dev": "rollup -c -w",
     "test": "scripty"
   },
