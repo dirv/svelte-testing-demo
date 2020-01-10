@@ -1,0 +1,27 @@
+{
+  "name": "svelte-testing-demo",
+  "version": "1.0.0",
+  "description": "A demo of Svelte 3 testing techniques",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirv/svelte-testing-demo.git"
+  },
+  "keywords": [
+    "svelte",
+    "testing",
+    "test",
+    "unit",
+    "testing",
+    "tdd"
+  ],
+  "author": "Daniel Irvine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dirv/svelte-testing-demo/issues"
+  },
+  "homepage": "https://github.com/dirv/svelte-testing-demo#readme"
+}
