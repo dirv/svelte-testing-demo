@@ -4,7 +4,9 @@
   "description": "A demo of Svelte 3 testing techniques",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "scripty"
   },
   "repository": {
     "type": "git",
@@ -23,5 +25,23 @@
   "bugs": {
     "url": "https://github.com/dirv/svelte-testing-demo/issues"
   },
-  "homepage": "https://github.com/dirv/svelte-testing-demo#readme"
+  "homepage": "https://github.com/dirv/svelte-testing-demo#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-multi-entry": "^3.0.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "babel-plugin-rewire-exports": "^2.1.0",
+    "jasmine": "^3.5.0",
+    "jsdom": "^15.2.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.1.3",
+    "scripty": "^1.9.1",
+    "serve": "^11.3.0",
+    "source-map-support": "^0.5.16",
+    "svelte": "^3.16.7"
+  }
 }
