@@ -46,3 +46,28 @@ export const unmountAll = () => {
   });
   mountedComponents = [];
 };
+
+const toMatchSelector = (util, customEqualityTesters) => ({
+  compare: (container, selector) => {
+    if (container.querySelector(selector) === null) {
+      return {
+        pass: false,
+        message: `Expected container to match CSS selector "${selector}" but it did not.`
+      }
+    } else {
+      return {
+        pass: true,
+        message: `Expected container not to match CSS selector "${selector}" but it did.`
+      }
+    }
+  }
+});
+
+export const asSvelteComponent = () => {
+  beforeEach(() => setDomDocument());
+  beforeAll(() => {
+    jasmine.addMatchers({ toMatchSelector });
+  });
+  afterEach(unmountAll);
+};
+
