@@ -6,4 +6,6 @@ else
   npx rollup -c rollup.test.config.js -i $1
 fi
 
-npx jasmine
+if [ $? == 0 ]; then
+  npx jasmine
+fi
