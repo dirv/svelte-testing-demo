@@ -1,5 +1,6 @@
-import { tick } from "svelte";
 import { mount, asSvelteComponent } from "./support/svelte.js";
+import { tick } from "svelte";
+import { price } from "../src/stores/price.js";
 import CallbackComponent from "../src/CallbackComponent.svelte";
 
 const fetchOkResponse = data =>
@@ -15,15 +16,16 @@ describe(CallbackComponent.name, () => {
       .and.returnValue(fetchOkResponse({ price: 99.99 }));
   });
 
-  it("makes a GET request to /price", () => {
+  it("displays the initial price", () => {
+    price.set(99.99);
     mount(CallbackComponent);
-    expect(window.fetch).toHaveBeenCalledWith("/price", { method: "GET" });
+    expect(container.textContent).toContain("The price is: $99.99");
   });
 
-  it("sets the price when API returned", async () => {
+  it("updates when the price changes", async () => {
     mount(CallbackComponent);
+    price.set(123.45);
     await tick();
-    await tick();
-    expect(container.textContent).toContain("The price is: $99.99");
+    expect(container.textContent).toContain("The price is: $123.45");
   });
 });
