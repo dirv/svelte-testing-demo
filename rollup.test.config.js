@@ -16,8 +16,7 @@ export default {
     multi(),
     svelte({ css: false, dev: true }),
     resolve({
-      dedupe: importee => importee === "svelte" || importee.startsWith("svelte/"),
-      only: [/^svelte/]
+      only: [/^svelte-/]
     }),
     commonjs(),
     babel({
