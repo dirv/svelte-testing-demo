@@ -3,7 +3,7 @@ import { bind, binding_callbacks } from "svelte/internal";
 
 let mountedComponents;
 
-const setupGlobalJsdom = (url = "https://localhost") => {
+export const setupGlobalJsdom = (url = "https://localhost") => {
   const dom = new JSDOM("", { url, pretendToBeVisual: true });
   global.document = dom.window.document;
   global.window = { ...global.window, ...dom.window };
