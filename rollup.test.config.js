@@ -14,7 +14,7 @@ export default {
   },
   plugins: [
     multi(),
-    svelte({ css: false, dev: true }),
+    svelte({ css: false }),
     commonjs(),
     babel({
       babelHelpers: "bundled",
