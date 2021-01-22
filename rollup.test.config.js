@@ -4,8 +4,7 @@ import svelte from "rollup-plugin-svelte";
 import babel from "@rollup/plugin-babel";
 
 export default {
-  //input: "spec/**/*.spec.js",
-  input: "spec/CallbackComponent.spec.js",
+  input: "spec/**/*.spec.js",
   output: {
     sourcemap: true,
     format: "cjs",
