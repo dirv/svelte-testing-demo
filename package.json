@@ -43,7 +43,7 @@
     "scripty": "^2.0.0",
     "serve": "^11.3.2",
     "source-map-support": "^0.5.19",
-    "svelte": "^3.31.2",
+    "svelte": "^3.49.0",
     "svelte-component-double": "^0.8.0"
   }
 }
